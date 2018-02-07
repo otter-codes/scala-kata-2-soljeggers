@@ -8,7 +8,8 @@ object CollatzConjecture extends App {
     if (num == 1) {
       cycle + 1
     } else {
-      if (num % 2 == 0) Collatz(num / 2, cycle + 1)
+      if (num % 2 == 0)
+        Collatz(num / 2, cycle + 1)
       else
         Collatz(3 * num + 1, cycle + 1)
     }
