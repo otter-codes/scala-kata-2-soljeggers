@@ -1,8 +1,11 @@
 package example
 
+import scala.io.StdIn
+
 object CollatzConjecture extends App {
 
-  /** one example below **/
+
+  val num = StdIn.readLine ("Enter a number: \n")toInt
 
   def Collatz(num: Int, cycle: Int = 0): Int = {
     if (num == 1) {
@@ -14,7 +17,6 @@ object CollatzConjecture extends App {
         Collatz(3 * num + 1, cycle + 1)
     }
   }
-
-  println(Collatz(19))
-
+  println(Collatz(num))
 }
+
